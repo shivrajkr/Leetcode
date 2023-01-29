@@ -7,11 +7,12 @@ public class addition_two_number {
 
     static boolean Logic(String[] split, Long value) {
         String s = Arrays.toString(split);
-        String temp1 = "", temp2 = "";
+        String temp1 = "", temp2 = "",temp3="";
         for (int i = 0; i < split.length; i++) { 
             value = value - Long.parseLong(split[i]);  // Subtract each element with k and check the result element present in the array
             temp1 = ", " + value + "]";
             temp2 = ", " + value + ",";
+            temp3= "["+value+"]";
             if (s.contains(temp1) || s.contains(temp2)) { //checking the result element with comma as it was strings
                 System.out.println("The Two numbers are " + split[i] + "," + (value));
                 return true;
